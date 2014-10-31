@@ -55,6 +55,16 @@ void LivingEntity::recevoirDegats(int nbDegats)
 		m_PV = 0;
 }
 
+void LivingEntity::recevoirPV(int nbPV)
+{
+	m_PV += nbPV;
+
+	if (m_PV > 0)
+		m_PV = 0;
+
+	// Voir LivingEntity::recevoirDegats pour plus d'informations
+}
+
 bool LivingEntity::vivant() const // Retourne true si le personnage est vivant (m_PV > 0) et false sinon
 {
 	if (m_PV > 0)

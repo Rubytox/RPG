@@ -18,6 +18,7 @@ public:
 
 	void attaquer(LivingEntity &cible) const; // Méthode pointant sur une entité. Appelle recevoirDegats
 	void recevoirDegats(int nbDegats); // Méthode diminuant la valeur de l'attribut m_PV
+	void recevoirPV(int nbPV); // On rajoute des PV à l'entité
 	bool vivant() const; // Renvoie un l'état de l'entité (morte / vivante)
 	void sePresenter() const; // DEBUG --> affiche des informations sur le personnage
 

@@ -48,6 +48,11 @@ void Sorcier::lancerSort(LivingEntity &cible, Sorts sort)
 	
 }
 
+void Sorcier::soin(LivingEntity &cible)
+{
+	cible.recevoirPV(10);
+}
+
 void Sorcier::sePresenter() const
 {
 	Elfe::sePresenter();
