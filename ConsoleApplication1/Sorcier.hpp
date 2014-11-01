@@ -11,6 +11,7 @@ public:
 
 	void lancerSort(LivingEntity &cible, Sorts sort); // Lance un sort sur une entité quelconque
 	void sePresenter() const;
+	//void soin(LivingEntity &cible); // Lance un sort de soin sur une entité quelconque
 
 	~Sorcier();
 private:
