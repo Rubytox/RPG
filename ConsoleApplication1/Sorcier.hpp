@@ -4,6 +4,7 @@
 #include <vector>
 #include "Elfe.hpp"
 #include "Define.hpp"
+#include "algos.hpp"
 
 class Sorcier : public Elfe
 {
@@ -15,6 +16,8 @@ public:
 	void soin(LivingEntity &cible); // Lance un sort de soin sur une entité quelconque
 
 	~Sorcier();
+private:
+	std::vector<Sorts> m_sorts;
 };
 
 #endif // SORCIER_HPP

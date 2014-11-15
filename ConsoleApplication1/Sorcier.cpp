@@ -2,13 +2,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
 Sorcier::Sorcier(int PV, int degatsDeBase, int niveau, std::string m_nom, Element element) : Elfe(PV, degatsDeBase, niveau, m_nom, element) // 
 {
-	//m_sorts.push_back(BOULE_DE_FEU);
-	//m_sorts.push_back(BOULE_DE_GLACE);
+	m_sorts.push_back(BOULE_DE_FEU);
+	m_sorts.push_back(BOULE_DE_GLACE);
 }
 
 Sorcier::~Sorcier()
@@ -22,8 +23,15 @@ void Sorcier::lancerSort(LivingEntity &cible, Sorts sort)
 	{
 		if (sort == BOULE_DE_FEU)
 		{
-			cout << "Sorcier lance une boule de feu sur " << cible.getNom() << " et lui inflige 10 points de degats !" << endl;
-			cible.recevoirDegats(10);
+			if (inVector(m_sorts, BOULE_DE_FEU))
+			{
+				cout << "Sorcier lance une boule de feu sur " << cible.getNom() << " et lui inflige 10 points de degats !" << endl;
+				cible.recevoirDegats(10);
+			}
+			else
+			{
+				cout << "Sorcier ne peut pas lancer le sort \"Boule de Feu\" car il ne le connait pas encore !" << endl;
+			}
 		}
 		else if (sort == BOULE_DE_GLACE)
 		{

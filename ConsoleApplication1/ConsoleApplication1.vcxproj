@@ -94,6 +94,7 @@
     <ClCompile Include="Sorcier.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="algos.hpp" />
     <ClInclude Include="Define.hpp" />
     <ClInclude Include="Elfe.hpp" />
     <ClInclude Include="Enemy.hpp" />

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <vector>
 
 #include "LivingEntity.hpp"
 #include "Enemy.hpp"
@@ -15,24 +16,16 @@ int main()
 {
 	srand((unsigned int)time(0)); // Initialisation des nombres aléatoires
 		
-	Sorcier sorcier(100, 20, 1, "Sorcier", FEU);
-	Renard renard(100, 20, 1, "Renard", VENT, false);
+	Sorcier sorcier1(100, 20, 1, "Luke", FEU);
+	Sorcier sorcier2(100, 20, 1, "Dark Vador", EAU);
 
-	sorcier.sePresenter();
-	renard.sePresenter();
-	
-	cout << "--------" << endl;
+	sorcier1.sePresenter();
+	cout << "-----" << endl;
+	sorcier2.sePresenter();
 
-	sorcier.lancerSort(renard, BOULE_DE_FEU);
-	sorcier.lancerSort(renard, BOULE_DE_GLACE);
-	sorcier.lancerSort(renard, BOULE_DE_FOUDRE);
-	sorcier.lancerSort(renard, BOULE_DE_GLACE);
-	sorcier.lancerSort(renard, BOULE_DE_FEU);
-	renard.griffer(sorcier);
-	sorcier.sePresenter();
-	renard.sePresenter();
+	cout << endl << "-----" << endl << endl;
 
-	cout << "------" << endl;
+	sorcier1.lancerSort(sorcier2, BOULE_DE_FEU);
 
 	cin.get();
 	return 0;
