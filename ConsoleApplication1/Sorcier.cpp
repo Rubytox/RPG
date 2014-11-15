@@ -7,8 +7,8 @@ using namespace std;
 
 Sorcier::Sorcier(int PV, int degatsDeBase, int niveau, std::string m_nom, Element element) : Elfe(PV, degatsDeBase, niveau, m_nom, element) // 
 {
-	m_sorts.push_back(BOULE_DE_FEU);
-	m_sorts.push_back(BOULE_DE_GLACE);
+	//m_sorts.push_back(BOULE_DE_FEU);
+	//m_sorts.push_back(BOULE_DE_GLACE);
 }
 
 Sorcier::~Sorcier()

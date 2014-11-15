@@ -3,7 +3,7 @@
   <Class Name="LivingEntity">
     <Position X="5.75" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>QIAAAAAAQAAAAAAAAAAAEAIAACAAAgAQAQgAAEgAAAA=</HashCode>
+      <HashCode>QIAAAAIAQAAAAAAAAAAAEAIAACAAAgAQAQgAAEgAAAA=</HashCode>
       <FileName>LivingEntity.hpp</FileName>
     </TypeIdentifier>
   </Class>
@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Guerrier">
-    <Position X="4.75" Y="6.75" Width="1.75" />
+    <Position X="4.5" Y="6.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAIAQAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Guerrier.hpp</FileName>
@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Humain">
-    <Position X="4.75" Y="4.5" Width="1.75" />
+    <Position X="4.5" Y="4.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Humain.hpp</FileName>
@@ -52,7 +52,7 @@
   <Class Name="Sorcier">
     <Position X="2.25" Y="6.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAECAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAIAAAAAECAA=</HashCode>
       <FileName>Sorcier.hpp</FileName>
     </TypeIdentifier>
   </Class>

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Elfe.hpp"
+#include "Define.hpp"
 
 class Sorcier : public Elfe
 {
@@ -11,11 +12,9 @@ public:
 
 	void lancerSort(LivingEntity &cible, Sorts sort); // Lance un sort sur une entité quelconque
 	void sePresenter() const;
-	//void soin(LivingEntity &cible); // Lance un sort de soin sur une entité quelconque
+	void soin(LivingEntity &cible); // Lance un sort de soin sur une entité quelconque
 
 	~Sorcier();
-private:
-	vector<Sorts> m_sorts;
 };
 
 #endif // SORCIER_HPP
