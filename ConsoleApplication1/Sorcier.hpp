@@ -15,6 +15,8 @@ public:
 	void sePresenter() const;
 	void soin(LivingEntity &cible); // Lance un sort de soin sur une entité quelconque
 
+	bool sortDisponible(Sorts sort) const; // Vérifie si le Sorcier peut lancer un sort
+
 	~Sorcier();
 private:
 	std::vector<Sorts> m_sorts;
