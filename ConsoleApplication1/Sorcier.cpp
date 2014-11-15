@@ -8,8 +8,13 @@ using namespace std;
 
 Sorcier::Sorcier(int PV, int degatsDeBase, int niveau, std::string m_nom, Element element) : Elfe(PV, degatsDeBase, niveau, m_nom, element) // 
 {
-	m_sorts.push_back(BOULE_DE_FEU);
-	m_sorts.push_back(BOULE_DE_GLACE);
+	BouleDeFeu BouleDeFeu("Boule de Feu", 10, 0);
+	BouleDeGlace BouleDeGlace("Boule de Glace", 20, 0);
+	BouleDeFoudre BouleDeFoudre("Boule de Foudre", 40, 0);
+
+	m_sorts.push_back(BouleDeFeu);
+	m_sorts.push_back(BouleDeGlace);
+	m_sorts.push_back(BouleDeFoudre);
 }
 
 Sorcier::~Sorcier()
@@ -17,58 +22,26 @@ Sorcier::~Sorcier()
 
 }
 
-void Sorcier::lancerSort(LivingEntity &cible, Sorts sort)
+void Sorcier::lancerSort(LivingEntity& cible, int idSort)
 {
-	if (rand() % 6 == 1 || rand() % 6 == 3 || rand() % 6 == 5)
+	if (!sortDisponible(idSort))
 	{
-		switch (sort)
-		{
-		case BOULE_DE_FEU:
-			if (sortDisponible(BOULE_DE_FEU))
-			{
-				cout << "Sorcier lance une boule de feu sur " << cible.getNom() << " et lui inflige 10 points de degats !" << endl;
-				cible.recevoirDegats(10);
-			}
-			else
-			{
-				cout << "Sorcier ne peut pas lancer le sort \"Boule de Feu\" car il ne le connait pas encore !" << endl;
-			}
-			break;
-		case BOULE_DE_GLACE:
-			if (sortDisponible(BOULE_DE_GLACE))
-			{
-				cout << "Sorcier lance une boule de glace sur " << cible.getNom() << " et lui inflige 20 points de degats !" << endl;
-				cible.recevoirDegats(20);
-			}
-			else
-			{
-				cout << "Sorcier ne peut pas lancer le sort \"Boule de Glace\" car il ne le connait pas encore !" << endl;
-			}
-			break;
-		case BOULE_DE_FOUDRE:
-			if (sortDisponible(BOULE_DE_FOUDRE))
-			{
-				cout << "Sorcier lance une boule de foudre sur " << cible.getNom() << " et lui inflige 40 points de degats !" << endl;
-				cible.recevoirDegats(40);
-			}
-			else
-			{
-				cout << "Sorcier ne peut pas lancer le sort \"Boule de Foudre\" car il ne le connait pas encore !" << endl;
-			}
-			break;
-		default:
-			cout << "Ce sort n'existe pas !" << endl;
-		}
+		cout << "Le sort n'est pas encore appris..." << endl;
+		return;
 	}
-	else
-	{
-		cout << "L'attaque de sorcier a echoue !" << endl;
-	}
+
+	cout << "Sorcier lance le sort " << m_sorts[idSort].getNom() << " sur " << cible.getNom() << " qui se prend " << m_sorts[idSort].getPuissance() << " degats." << endl;
+	cible.recevoirDegats(m_sorts[idSort].getPuissance());
 }
 
-bool Sorcier::sortDisponible(Sorts sort) const
+bool Sorcier::sortDisponible(int idSort) const
 {
-	return inVector(m_sorts, sort);
+	for (unsigned int i = 0; i < m_sorts.size(); ++i)
+	{
+		if (m_sorts[i].getID() == idSort)
+			return true;
+	}
+	return false;
 }
 
 void Sorcier::soin(LivingEntity &cible)

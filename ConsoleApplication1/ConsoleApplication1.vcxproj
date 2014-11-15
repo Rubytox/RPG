@@ -92,6 +92,7 @@
     <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="Renard.cpp" />
     <ClCompile Include="Sorcier.cpp" />
+    <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algos.hpp" />
@@ -104,6 +105,7 @@
     <ClInclude Include="Personnage.hpp" />
     <ClInclude Include="Renard.hpp" />
     <ClInclude Include="Sorcier.hpp" />
+    <ClInclude Include="Sort.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

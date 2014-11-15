@@ -25,7 +25,14 @@ int main()
 
 	cout << endl << "-----" << endl << endl;
 
-	sorcier1.lancerSort(sorcier2, BOULE_DE_FEU);
+	sorcier1.lancerSort(sorcier2, 0);
+	sorcier2.lancerSort(sorcier1, 3);
+
+	cout << endl << "-----" << endl << endl;
+
+	sorcier1.sePresenter();
+	cout << "-----" << endl;
+	sorcier2.sePresenter();
 
 	cin.get();
 	return 0;
