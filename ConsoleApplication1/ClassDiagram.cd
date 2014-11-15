@@ -52,7 +52,7 @@
   <Class Name="Sorcier">
     <Position X="2.25" Y="6.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAIAAAAAECAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAIAAAAABAAAAIAAAAAkCAA=</HashCode>
       <FileName>Sorcier.hpp</FileName>
     </TypeIdentifier>
   </Class>
