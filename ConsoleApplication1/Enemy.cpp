@@ -8,7 +8,7 @@ Enemy::Enemy() : LivingEntity(), m_hostile(false)
 {
 }
 
-Enemy::Enemy(int PV, int degatsDeBase, int niveau, string nom, Element element, bool hostile) : LivingEntity(PV, degatsDeBase, niveau, nom, element), m_hostile(hostile)
+Enemy::Enemy(int PV, int maxPV, int degatsDeBase, int niveau, string nom, Element element, bool hostile) : LivingEntity(PV, maxPV, degatsDeBase, niveau, nom, element), m_hostile(hostile)
 {
 }
 

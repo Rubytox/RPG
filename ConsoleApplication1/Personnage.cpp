@@ -4,7 +4,7 @@
 using namespace std;
 
 // CONSTRUCTEURS
-Personnage::Personnage(int PV, int degatsDeBase, int niveau, std::string nom, Element element) : LivingEntity(PV, degatsDeBase, niveau, nom, element)
+Personnage::Personnage(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element) : LivingEntity(PV, maxPV, degatsDeBase, niveau, nom, element)
 {
 }
 

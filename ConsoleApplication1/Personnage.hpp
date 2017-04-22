@@ -1,4 +1,4 @@
-#ifndef PERSONNAGE_HPP
+ï»¿#ifndef PERSONNAGE_HPP
 #define PERSONNAGE_HPP
 
 #include "LivingEntity.hpp"
@@ -6,17 +6,17 @@
 class Personnage : public LivingEntity
 {
 public:
-	Personnage(int PV, int degatsDeBase, int niveau, std::string nom, Element element);
+	Personnage(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element);
 
-	void setExp(); // Modifie les points d'expérience du personnage (lorsqu'il tue un ennemi par exemple ou accomplit une quête)
+	void setExp(); // Modifie les points d'expÃ©rience du personnage (lorsqu'il tue un ennemi par exemple ou accomplit une quÃªte)
 	void sePresenter() const;
 
 	~Personnage();
 protected:
-	int m_exp; // Indique les points d'expérience du personnage
-	int m_expRequis; // Indique les points d'expérience requis pour passer au niveau supérieur
+	int m_exp; // Indique les points d'expÃ©rience du personnage
+	int m_expRequis; // Indique les points d'expÃ©rience requis pour passer au niveau supÃ©rieur
 	
-	int m_degatsFeu; // Dégâts sur les différents éléments
+	int m_degatsFeu; // DÃ©gÃ¢ts sur les diffÃ©rents Ã©lÃ©ents
 	int m_degatsVent;
 	int m_degatsEau;
 	int m_degatsTerre;

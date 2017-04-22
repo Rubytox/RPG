@@ -1,4 +1,4 @@
-#ifndef ALGOS_HPP
+﻿#ifndef ALGOS_HPP
 #define ALGOS_HPP
 
 #include <vector>
@@ -7,7 +7,7 @@
 /*
  * inVector
  * --------
- * Renvoie un bool�en si tab contient occurence
+ * Renvoie un booléen si tab contient occurence
  */
 template<typename T>
 bool inVector(std::vector<T> tab, T occurence)

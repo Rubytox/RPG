@@ -1,4 +1,4 @@
-#ifndef GUERRIER_HPP
+Ôªø#ifndef GUERRIER_HPP
 #define GUERRIER_HPP
 
 #include "Humain.hpp"
@@ -6,9 +6,9 @@
 class Guerrier : public Humain
 {
 public:
-	Guerrier(int PV, int degatsDeBase, int niveau, std::string nom, Element element);
+	Guerrier(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element);
 
-	void hurler(LivingEntity &cible); // Inflige des dÈg‚ts sonores ‡ une cible quelconque
+	void hurler(LivingEntity &cible); // Inflige des d√©g√¢ts sonores √† une cible quelconque
 	void sePresenter() const;
 
 	~Guerrier();

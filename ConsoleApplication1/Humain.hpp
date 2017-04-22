@@ -6,7 +6,7 @@
 class Humain : public Personnage
 {
 public: 
-	Humain(int PV, int degatsDeBase, int niveau, std::string nom, Element element);
+	Humain(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element);
 	void sePresenter() const;
 	~Humain();
 

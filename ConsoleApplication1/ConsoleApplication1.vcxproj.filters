@@ -82,6 +82,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="Entites.cd" />
+    <None Include="Sorts.cd" />
   </ItemGroup>
 </Project>

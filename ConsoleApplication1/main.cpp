@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <vector>
@@ -14,10 +14,10 @@ using namespace std;
 
 int main()
 {
-	srand((unsigned int)time(0)); // Initialisation des nombres al�atoires
+	srand((unsigned int)time(0)); // Initialisation des nombres aléatoires
 		
-	Sorcier sorcier1(100, 20, 1, "Luke", FEU);
-	Sorcier sorcier2(100, 20, 1, "Dark Vador", EAU);
+	Sorcier sorcier1(100, 100, 20, 1, "Luke", FEU);
+	Sorcier sorcier2(100, 100, 20, 1, "Dark Vador", EAU);
 
 	sorcier1.sePresenter();
 	cout << "-----" << endl;
@@ -26,7 +26,7 @@ int main()
 	cout << endl << "-----" << endl << endl;
 
 	sorcier1.lancerSort(sorcier2, 0);
-	sorcier2.lancerSort(sorcier1, 3);
+	sorcier2.lancerSort(sorcier1, 42);
 
 	cout << endl << "-----" << endl << endl;
 

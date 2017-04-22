@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sort">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAACAAAAQAAEgAAAAAgAAAAAMAAABAAA=</HashCode>
+      <FileName>Sort.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BouleDeFeu">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Sort.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BouleDeGlace">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Sort.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BouleDeFoudre">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Sort.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Element">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAIAAACgAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>

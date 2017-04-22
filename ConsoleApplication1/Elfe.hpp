@@ -6,7 +6,7 @@
 class Elfe : public Personnage
 {
 public:
-	Elfe(int PV, int degatsDeBase, int niveau, std::string nom, Element element);
+	Elfe(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element);
 	void sePresenter() const;
 	~Elfe();
 

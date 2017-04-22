@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include "LivingEntity.hpp"
 
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 LivingEntity::LivingEntity() : m_PV(100), m_degatsDeBase(10), m_niveau(1), m_nom("Nom par defaut"), m_element(NEUTRE)
 {
 }
-LivingEntity::LivingEntity(int PV, int degatsDeBase, int niveau, string nom, Element element) : m_PV(PV), m_degatsDeBase(degatsDeBase), m_niveau(niveau), m_nom(nom), m_element(element)
+LivingEntity::LivingEntity(int PV, int maxPV, int degatsDeBase, int niveau, string nom, Element element) : m_PV(PV), m_max_PV(maxPV), m_degatsDeBase(degatsDeBase), m_niveau(niveau), m_nom(nom), m_element(element)
 {
 }
 
@@ -21,7 +21,7 @@ LivingEntity::~LivingEntity()
 
 void LivingEntity::attaquer(LivingEntity &cible) const
 {
-    // Inflige ‡ la cible les dÈgats correspondants.
+    // Inflige √† la cible les d√©g√¢ts correspondants.
 	if (cible.getElement() == NEUTRE || m_element == NEUTRE)
 	{
 		cible.recevoirDegats(m_degatsDeBase);
@@ -49,9 +49,9 @@ void LivingEntity::attaquer(LivingEntity &cible) const
 
 void LivingEntity::recevoirDegats(int nbDegats)
 {
-	m_PV -= nbDegats; // On enlËve le nombre de dÈg‚ts infligÈ ‡ la vie de l'entitÈ
+	m_PV -= nbDegats; // On enl√®ve le nombre de d√©g√¢ts inflig√©s √† la vie de l'entit√©
 
-	if (m_PV < 0) // Si les points de vie de la cible descendent en dessous de 0, on les remet ‡ 0
+	if (m_PV < 0) // Si les points de vie de la cible descendent en dessous de 0, on les remet √† 0
 		m_PV = 0;
 }
 
@@ -59,25 +59,22 @@ void LivingEntity::recevoirPV(int nbPV)
 {
 	m_PV += nbPV;
 
-	if (m_PV > 0)
-		m_PV = 0;
+	if (m_PV > m_max_PV)
+		m_PV = m_max_PV;
 
 	// Voir LivingEntity::recevoirDegats pour plus d'informations
 }
 
 bool LivingEntity::vivant() const // Retourne true si le personnage est vivant (m_PV > 0) et false sinon
 {
-	if (m_PV > 0)
-		return true;
-	else
-		return false;
+	return m_PV > 0;
 }
 
 void LivingEntity::sePresenter() const
 {
 	if (vivant())
 	{
-		cout << "Bonjour ! Je suis une entitÈ me nommant " << m_nom << "! Je suis niveau " << m_niveau << ", j'ai " << m_PV << " points de vie, et j'inflige " << m_degatsDeBase << " points de dÈg‚ts de base." << endl;
+		cout << "Bonjour ! Je suis une entite me nommant " << m_nom << "! Je suis niveau " << m_niveau << ", j'ai " << m_PV << " points de vie, et j'inflige " << m_degatsDeBase << " points de degats de base." << endl;
 		switch (m_element)
 		{
 		case NEUTRE:
@@ -96,7 +93,7 @@ void LivingEntity::sePresenter() const
 			cout << "Je suis feu " << endl;
 			break;
 		default:
-			cout << "ElÈment non trouvÈ" << endl;
+			cout << "Element non trouve." << endl;
 			break;
 		}
 	}

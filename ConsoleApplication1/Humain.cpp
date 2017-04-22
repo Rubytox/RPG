@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Humain::Humain(int PV, int degatsDeBase, int niveau, std::string nom, Element element) : Personnage(PV, degatsDeBase, niveau, nom, element)
+Humain::Humain(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element) : Personnage(PV, maxPV, degatsDeBase, niveau, nom, element)
 {
 
 }

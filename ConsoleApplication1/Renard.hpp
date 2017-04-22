@@ -1,4 +1,4 @@
-#ifndef RENARD_HPP
+Ôªø#ifndef RENARD_HPP
 #define RENARD_HPP
 
 #include "Enemy.hpp"
@@ -6,9 +6,9 @@
 class Renard : public Enemy
 {
 public:
-	Renard(int PV, int degatsDeBase, int niveau, std::string nom, Element element, bool hostile);
+	Renard(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element, bool hostile);
 
-	void griffer(LivingEntity &cible); // Inflige des dÈg‚ts de griffure ‡ une cible quelconque
+	void griffer(LivingEntity &cible); // Inflige des d√©g√¢ts de griffure √† une cible quelconque
 	void sePresenter() const;
 
 	~Renard();

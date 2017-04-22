@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Guerrier::Guerrier(int PV, int degatsDeBase, int niveau, std::string nom, Element element) : Humain(PV, degatsDeBase, niveau, nom, element)
+Guerrier::Guerrier(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element) : Humain(PV, maxPV, degatsDeBase, niveau, nom, element)
 {
 
 }

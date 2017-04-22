@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Elfe::Elfe(int PV, int degatsDeBase, int niveau, std::string nom, Element element) : Personnage(PV, degatsDeBase, niveau, nom, element)
+Elfe::Elfe(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element) : Personnage(PV, maxPV, degatsDeBase, niveau, nom, element)
 {
 
 }

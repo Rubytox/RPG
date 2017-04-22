@@ -5,9 +5,9 @@
 
 using namespace std;
 
-Renard::Renard(int PV, int degatsDeBase, int niveau, std::string nom, Element element, bool hostile) : Enemy(PV, degatsDeBase, niveau, nom, element, hostile)
+Renard::Renard(int PV, int maxPV, int degatsDeBase, int niveau, std::string nom, Element element, bool hostile) : Enemy(PV, maxPV, degatsDeBase, niveau, nom, element, hostile)
 {
-	cout << "Un renard apparaît!" << endl;
+	cout << "Un renard apparait!" << endl;
 }
 
 Renard::~Renard()
